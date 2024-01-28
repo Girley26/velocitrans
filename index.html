@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>VelociTrans</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      section {
+        position: relative;
+      }
+
+      .main-footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 55px 0 70px;
+        width: 87%;
+        margin: 0 auto;
+      }
+
+      .footer-item {
+        color: white;
+        text-decoration: none;
+      }
+
+      .main-footer-content > a:hover {
+        text-decoration: underline;
+      }
+
+      .store-link {
+        color: #666666;
+        display: inline-flex;
+        align-items: center;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 0 24px;
+      }
+
+      .store-link:hover {
+        text-decoration: underline;
+        text-decoration-color: #b2b2b2;
+      }
+
+      .store-link > img {
+        margin-right: 8px;
+      }
+
+      .store-links-section {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 130px;
+        padding-bottom: 50px;
+      }
+
+      .links-section {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+      }
+
+      .section-separator {
+        border-top: 2px solid #d9d9d9;
+        margin: 50px auto;
+        width: 87%;
+        max-width: calc(996 * 1px);
+      }
+
+      .section-right-image {
+        background-image: url("motorista-de-caminhao-profissional-configurando-a-navegacao-para-o-destino_342744-295.png");
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 55%;
+        height: 100vh;
+      }
+
+      .section-left-container {
+        position: relative;
+        background-color: white;
+        padding: 60px 56px 60px 0;
+        width: 55%;
+        z-index: 1;
+      }
+
+      .section-title {
+        color: #0078d4;
+        font-size: 64px;
+        margin-bottom: 64px;
+        margin-top: 0;
+      }
+
+      .section-text {
+        color: #666666;
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .section-wrapper {
+        margin: 50px auto;
+        width: 87%;
+        max-width: calc(996 * 1px);
+        height: 100vh;
+        padding-top: 70px;
+      }
+
+      .img {
+        min-width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+
+      .section-welcome {
+        margin-bottom: 100px;
+        position: relative;
+      }
+
+      .apps-welcome {
+        display: flex;
+        gap: 96px;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+        right: 0;
+        width: 87%;
+        padding: 90px 0;
+        padding-right: 13vw;
+        box-sizing: border-box;
+      }
+
+      .card-store {
+        border-radius: 1rem;
+      }
+
+      .card-store-img-top {
+        border-top-left-radius: calc(1rem - 1px);
+        border-top-right-radius: calc(1rem - 1px);
+      }
+
+      .card-store-body-button {
+        padding: 0.375rem 0.75rem;
+      }
+
+      .card-store:hover .card-store-body-button {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .sections-product {
+        background-color: #dcebfa;
+      }
+
+      .header {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background-color: #007bff;
+        z-index: 999;
+      }
+
+      .botaoMeusPedidos {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 4px;
+        border: solid 1px #086aaf;
+        padding: 8px 12px;
+        color: #086aaf;
+        font-weight: bold;
+      }
+
+      .botaoMeusPedidos:hover {
+        color: #086aaf;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header shadow-lg">
+      <div
+        class="container-fluid d-flex align-items-center justify-content-between px-5"
+        style="height: 60px"
+      >
+        <a href="#">
+          <img src="./velocitrans_logo_azul.png" width="240" />
+        </a>
+        <a href="#" class="botaoMeusPedidos">Meus Pedidos</a>
+      </div>
+    </header>
+    <main>
+      <div
+        id="carouselExampleFade"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./Banner_mercado_shops_colecao_outono_inverno_geometrico_cinza.png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./Banner_mercado_shops_nova_colecao_elegante_amarelo_e_preto_1.png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-target="#carouselExampleFade"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-target="#carouselExampleFade"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+      <section class="sections-product">
+        <div class="container">
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 pt-4"
+          >
+            <a href="./" class="col card-link mb-4 ml-0">
+              <div class="btn btn-light card card-store shadow text-left p-0">
+                <div
+                  class="card bg-primary text-white text-center"
+                  style="position: absolute; margin: 1.25rem"
+                >
+                  <div class="card-body card-store-body-button">
+                    <span class="font-weight-bold">20%</span><br />
+                    <i class="bi bi-caret-down-fill"></i>
+                  </div>
+                </div>
+                <img
+                  src="./20945983.jpg"
+                  class="card-img-top card-store-img-top mt-4"
+                />
+                <div class="card-body">
+                  <h1 class="h3 font-weight-bold mb-0">
+                    Carga <span class="text-info">frágil</span>
+                  </h1>
+                  <div>
+                    <small class="text-secondary mb-0">a partir de</small>
+                    <h2 class="text-primary font-weight-bold p-0 m-0">
+                      R$ 100,00
+                    </h2>
+                    <small class="text-secondary mb-0">por entrega</small>
+                  </div>
+                  <p>
+                    <small>à vista com 20% de desconto</small>
+                  </p>
+                  <div
+                    class="bg-primary my-2"
+                    style="height: 6px; width: 30%"
+                  ></div>
+                  <h3 class="h5 text-info mb-0">R$ 120,00</h3>
+                  <p class="mb-0">
+                    <small
+                      >em até 2x de
+                      <span class="text-info">R$ 60,00</span></small
+                    >
+                  </p>
+                  <div
+                    class="card border-primary text-primary text-center mt-4 w-100"
+                  >
+                    <div class="card-body card-store-body-button">
+                      <i class="bi bi-cart"></i
+                      ><span class="pl-2">COMPRAR</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./" class="col card-link mb-4 ml-0">
+              <div class="btn btn-light card card-store shadow text-left p-0">
+                <div
+                  class="card bg-primary text-white text-center"
+                  style="position: absolute; margin: 1.25rem"
+                >
+                  <div class="card-body card-store-body-button">
+                    <span class="font-weight-bold">20%</span><br />
+                    <i class="bi bi-caret-down-fill"></i>
+                  </div>
+                </div>
+                <img
+                  src="./20945965.jpg"
+                  class="card-img-top card-store-img-top mt-4"
+                />
+                <div class="card-body">
+                  <h1 class="h3 font-weight-bold mb-0">
+                    <span>Entrega</span>
+                    <span class="text-primary">rápida</span>
+                  </h1>
+                  <div>
+                    <small class="text-secondary">a partir de</small>
+                    <h2 class="text-primary font-weight-bold mb-0">R$ 60,00</h2>
+                    <small class="text-secondary">por entrega</small>
+                  </div>
+                  <p>
+                    <small>a vista com 20% de desconto</small>
+                  </p>
+                  <div
+                    class="bg-primary my-2"
+                    style="height: 6px; width: 30%"
+                  ></div>
+                  <h3 class="h5 text-info mb-0">R$ 66,00</h3>
+                  <div class="mb-0">
+                    <small
+                      >em até 2x de
+                      <span class="text-info">R$ 33,00</span></small
+                    >
+                  </div>
+                  <div
+                    class="card border-primary text-primary text-center mt-4 w-100"
+                  >
+                    <div class="card-body card-store-body-button">
+                      <i class="bi bi-cart"></i
+                      ><span class="pl-2">COMPRAR</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./" class="col card-link mb-4 ml-0">
+              <div class="btn btn-light card card-store shadow text-left p-0">
+                <div
+                  class="card bg-primary text-white text-center"
+                  style="position: absolute; margin: 1.25rem"
+                >
+                  <div class="card-body card-store-body-button">
+                    <span class="font-weight-bold">20%</span><br />
+                    <i class="bi bi-caret-down-fill"></i>
+                  </div>
+                </div>
+                <img
+                  src="./20946035.jpg"
+                  class="card-img-top card-store-img-top mt-4"
+                />
+                <div class="card-body">
+                  <h1 class="h3 font-weight-bold mb-0">
+                    <span>Entrega</span>
+                    <span class="text-secondary">programada</span>
+                  </h1>
+                  <div>
+                    <span class="text-secondary">A partir de</span>
+                    <h2 class="text-primary font-weight-bold mb-0">R$ 30,00</h2>
+                    <span class="text-secondary mb-0">por entrega</span>
+                  </div>
+                  <p>
+                    <small>à vista com 20% de desconto</small>
+                  </p>
+                  <div
+                    class="bg-primary my-2"
+                    style="height: 6px; width: 30%"
+                  ></div>
+                  <h3 class="h5 text-info mb-0"></h3>
+                  <div>
+                    <h3 class="h5 text-info mb-0">R$ 36,00</h3>
+                    <small>em até 2x de</small>
+                    <small class="text-info">R$ 18,00</small>
+                  </div>
+                  <div
+                    class="card border-primary text-primary text-center mt-4 w-100"
+                  >
+                    <div class="card-body card-store-body-button">
+                      <i class="bi bi-cart"></i
+                      ><span class="pl-2">COMPRAR</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section-welcome">
+        <img
+          class="img"
+          src="vista-aerea-de-um-cruzamento-rodoviario-movimentado-e-cheio-de-trafego-durante-o-dia_181624-46287.png"
+          alt=""
+        />
+        <div class="apps-welcome">
+          <div class="d-flex align-items-center">
+            <h1 class="d-inline-block text-primary">
+              <i class="bi bi-rocket-takeoff-fill"></i>
+            </h1>
+            <div class="d-inline-block font-weight-bold">
+              <span>Carga</span><span class="text-primary">rápida</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <h1 class="d-inline-block text-primary">
+              <i class="bi bi-geo-alt-fill"></i>
+            </h1>
+            <div class="d-inline-block font-weight-bold">
+              <span>Carga</span><span class="text-primaryo">rastreada</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <h1 class="d-inline-block text-primary">
+              <i class="bi bi-shield-fill-check"></i>
+            </h1>
+            <div class="d-inline-block font-weight-bold">
+              <span>Carga</span><span class="text-primary">segura</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <h1 class="d-inline-block text-primary">
+              <!-- <i class="bi bi-clock-fill"></i> -->
+              <i class="bi bi-clock-history"></i>
+            </h1>
+            <div class="d-inline-block font-weight-bold">
+              <span style="margin-left: 4px">Carga</span
+              ><span class="text-primary">progamada</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="section-wrapper">
+          <div class="section-left-container">
+            <h3 class="section-title">
+              Rapidez e eficiência em suas operações
+            </h3>
+            <p class="section-text">
+              Comprometemo-nos com os mais altos padrões de segurança em todas
+              as nossas atividades. Na Velocitrans, estamos aqui para
+              simplificar seus processos de transporte e logística, para que
+              você possa focar no que realmente importa: o crescimento do seu
+              negócio. Conte conosco para acelerar suas conexões!.
+            </p>
+          </div>
+        </div>
+        <div class="section-right-image"></div>
+      </section>
+      <div class="section-separator"></div>
+      <section class="links-section">
+        <a class="store-link" href="" target="_blank">
+          <img src="logo-whatsapp.svg" alt="Whatsapp" width="48" />
+        </a>
+        <a class="store-link" href="" target="_blank">
+          <img src="logo-instagram.svg" alt="Instagram" width="48" />
+        </a>
+        <a class="store-link" href="" target="_blank">
+          <img src="logo-linkedin.svg" alt="Linkedin" width="48" />
+        </a>
+      </section>
+      <section class="store-links-section">
+        <a class="store-link" href="" target="_blank">
+          <img src="glyph-apple.svg" alt="App Store" width="18" />
+          <span>Velocitrans para iOS</span>
+        </a>
+        <a class="store-link" href="" target="_blank">
+          <img src="glyph-googleplay.svg" alt="Google Play" width="18" />
+          <span>Velocitrans para Android</span>
+        </a>
+      </section>
+    </main>
+    <!-- <footer class="bg-primary"> -->
+    <footer class="bg-primary">
+      <!-- <footer class="bg-info-emphasis"> -->
+      <div class="main-footer-content">
+        <a href="" target="_blank">
+          <img src="./velocitrans_logo_azul.png" alt="Omnilink" width="256" />
+        </a>
+        <span class="footer-item">&copy; 2024 Velocitrans</span>
+        <a class="footer-item" href="" target="_blank"
+          >Política de Privacidade</a
+        >
+        <a class="footer-item" href="" target="_blank">Fale Conosco</a>
+      </div>
+    </footer>
+  </body>
+</html>
