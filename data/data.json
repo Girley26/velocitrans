@@ -1,0 +1,17 @@
+{
+    "card": [
+        {
+            "name": "Entrega internacional",
+            "img": "https://avatars.githubusercontent.com/u/67542881?v=4",
+            "discount": "20",
+            "price": "150,00"
+        },
+        {
+            "name": "Entrega frágil",
+            "img": "https://avatars.githubusercontent.com/u/67542881?v=4",
+            "discount": "20",
+            "price": "150,00"
+        }
+    
+    ]
+}
